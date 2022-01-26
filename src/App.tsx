@@ -1,6 +1,6 @@
 import React from "react";
-import RouterComponents from "./routes";
-import { createTheme, CssBaseline, ThemeProvider, responsiveFontSizes  } from "@mui/material";
+import { createTheme, CssBaseline, ThemeProvider, responsiveFontSizes } from "@mui/material";
+import AppRoutes from "./routes";
 
 let theme = createTheme({
 	palette: {
@@ -19,8 +19,8 @@ theme = responsiveFontSizes(theme);
 const App = () => {
 	return (
 		<ThemeProvider theme={theme}>
+			<AppRoutes />
 			<CssBaseline />
-			<RouterComponents />
 		</ThemeProvider>
 	);
 };
